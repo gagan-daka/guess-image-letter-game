@@ -16,3 +16,66 @@
 .buttons div a button{
     border: none;
 }
+
+.user{
+    padding: 5px;
+}
+
+.user input::placeholder, .user-input input::placeholder{
+    padding: 5px;
+}
+
+#notification {
+    display: block;
+    color: red;
+    font-weight: 600;
+}
+
+.game-board{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.game-board div{
+    margin: 50px 20px 0 20px;
+    text-align: center;
+}
+
+.game-board div p{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.game-board div span{
+    display: block;
+    font-size: 18px;
+}
+
+#game-scenario{
+    margin-top: 5vh;
+}
+
+.user-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.user-input button{
+    outline: none;
+    margin-left: 5px;
+    padding: 5px;
+    background-color: #2b00ff;
+    color: #FFFFFF;
+    border: #2b11ff;
+}
+
+.user-input button span{
+    font-size: 15px;
+}
+
+.user-input button:active span{
+    font-size: 14px;
+}
