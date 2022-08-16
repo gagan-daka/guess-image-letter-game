@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.game{
+    width: 90%;
+    margin: 5vh auto;
+}
+
+.buttons div{
+    text-align: center;
+    margin: 10px;
+}
+
+.buttons div a button{
+    border: none;
+}
