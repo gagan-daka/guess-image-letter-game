@@ -54,6 +54,7 @@
 
 #game-scenario{
     margin-top: 5vh;
+    border: 1px solid red;
 }
 
 .user-input{

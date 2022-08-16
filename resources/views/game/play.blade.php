@@ -16,9 +16,10 @@
 
     <body>
         <div class="game-board">
+            
             <div class="timer">
                 <span>Timer</span>
-                <p>00:00</p>
+                <p id="timer-display">00:00</p>
             </div>
             <div class="score-count">
                 <span>Score</span>
