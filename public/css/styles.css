@@ -54,7 +54,8 @@
 
 #game-scenario{
     margin-top: 5vh;
-    border: 1px solid red;
+    border-left: 2px solid red;
+    border-right: 2px solid red;
 }
 
 .user-input{
@@ -79,4 +80,12 @@
 
 .user-input button:active span{
     font-size: 14px;
+}
+
+#game-over{
+    font-weight: 600;
+    color: red;
+    text-align: center;
+    padding: 22px;
+    font-size: 20px;
 }
