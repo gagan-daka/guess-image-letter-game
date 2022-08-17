@@ -53,6 +53,21 @@ var allImages = [
     "vegeta.jpg",
     "weeknd.jpg",
     "yennefer.jpg",
+    "nintendo-switch.jpg",
+    "travis.jpg",
+    "thanos.jpg",
+    "spiderman.jpg",
+    "morad.jpg",
+    "mario.jpg",
+    "map.jpg",
+    "iron-man.jpg",
+    "iphone.jpg",
+    "ibai.jpg",
+    "giza.jpg",
+    "fortnite.jpg",
+    "elon-musk.jpg",
+    "code.jpeg"
+
 ];
 
 if (checkLetterBtn) {
