@@ -5,6 +5,8 @@ var context;
 var checkLetterBtn = document.getElementById("checkBtn");
 var timerDisplay = document.getElementById("timer-display");
 let letterInput = document.getElementById("letter");
+
+//IMAGE
 var imgFirstLetter;
 var image;
 var canvasHeight = 250;
@@ -17,8 +19,20 @@ var numberOfWrongTries = 0;
 
 var points = 0;
 var finalScore = 0;
+var bonus;
 var scoreDisplay = document.getElementById("score-display");
 var gameOverDisplay = document.getElementById("game-over");
+
+//RESULT DISPLAY
+let resultContainer = document.getElementById("result-container");
+var resultNormalScore = document.getElementById("normal-score-display");
+var resultImageGuessed = document.getElementById("total-image-guessed");
+var resultWrongTrie = document.getElementById("wrong-tries");
+var resultBonus = document.getElementById("bonus");
+var resultFinalScore = document.getElementById("final-score");
+
+//MUSIC
+var audio = document.getElementById("audio");
 
 var allImages = [
     "a18.jpg",
@@ -49,7 +63,10 @@ if (checkLetterBtn) {
             totalImagesGuessed++;
             score();
             scoreDisplay.innerHTML = finalScore;
+            letterInput.value = ''
             changeImage();
+        }else{
+            numberOfWrongTries++
         }
     });
 }
@@ -57,8 +74,10 @@ if (checkLetterBtn) {
 
 function start()
 {
+    //resultContainer.style.display = "none";
     context = canvas.getContext("2d");
     drawGameArea();
+    /*playMusic();*/
     startGameCounthdown();
 }
 
@@ -108,9 +127,6 @@ function drawGameArea()
 
 function insertImageOnCanvas()
 {
-    image_width = 450;
-    image_height = 250;
-
     image = new Image();
     image.src = 'img/'+allImages[Math.floor(Math.random() * allImages.length)];
     image.onload = function(){
@@ -121,6 +137,9 @@ function insertImageOnCanvas()
 
 function imageMovement()
 {
+    var image_width = 450;
+    var image_height = 250;
+
     context.clearRect(0, 0, canvas.width, canvas.height)
     context.drawImage(image, image_x_position, 15, image_width, image_height);
     console.log(image_x_position);
@@ -204,4 +223,40 @@ function gameOver()
     clearInterval(imageInterlval);
     clearInterval(timeInterval); 
     gameOverDisplay.innerHTML = "Game Over!"
+    resultsDisplay();
+}
+
+function resultsDisplay()
+{
+    resultNormalScore.innerHTML = finalScore
+    resultImageGuessed.innerHTML = totalImagesGuessed
+    resultWrongTrie.innerHTML = numberOfWrongTries
+
+    if(totalImagesGuessed >= 0 && totalImagesGuessed < 10) {
+        bonus = 1000
+    }else if(totalImagesGuessed >= 10 && totalImagesGuessed < 15){
+        bonus = 2000
+    }else if(totalImagesGuessed >= 15) {
+        bonus = 3000
+    }
+
+    //wrong tries
+    if(numberOfWrongTries >= 0 && numberOfWrongTries < 10) {
+        bonus = 500
+    }else if(numberOfWrongTries >= 10 && numberOfWrongTries < 15) {
+        bonus = 750
+    }else if(numberOfWrongTries >= 15) {
+        bonus = 900
+    }
+
+    resultBonus.innerHTML = bonus;
+
+    resultFinalScore.innerHTML = finalScore + bonus;
+
+    resultContainer.style.display = "inline";
+}
+
+function playMusic()
+{
+    audio.play();
 }

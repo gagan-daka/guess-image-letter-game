@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 .game{
@@ -65,12 +66,23 @@
     margin-top: 40px;
 }
 
+.user-interaction {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.user-interaction button:nth-child(1) {
+    margin-right: 10px;
+}
+
 .user-input button{
     outline: none;
     margin-left: 5px;
     padding: 5px;
-    background-color: #2b00ff;
+    background-color: #2b11ff;
     color: #FFFFFF;
+    font-weight: 600;
     border: #2b11ff;
 }
 
@@ -100,4 +112,17 @@
     left: 0;
     top: 25vh;
     color: red;
+}
+
+.table{
+    width: 1000px;
+    margin: auto;
+    color: #121F3D;
+    text-align: center;
+}
+
+.table thead{
+    padding: 5px;
+    background-color: #121F3D;
+    color: #FFFFFF;
 }
