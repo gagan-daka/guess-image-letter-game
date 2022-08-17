@@ -55,16 +55,18 @@ var allImages = [
     "yennefer.jpg",
 ];
 
-
 if (checkLetterBtn) {
     checkLetterBtn.addEventListener('click', () => {
         checkImageFirstLetter();
-        if(letterInput.value == imgFirstLetter) {
+        if(letterInput.value === imgFirstLetter) {
             totalImagesGuessed++;
             score();
             scoreDisplay.innerHTML = finalScore;
             letterInput.value = ''
             changeImage();
+            setTimeout(function(){
+                scoreDisplay.style.animation = '';
+             }, 800);
         }else{
             numberOfWrongTries++
         }
@@ -74,10 +76,8 @@ if (checkLetterBtn) {
 
 function start()
 {
-    //resultContainer.style.display = "none";
     context = canvas.getContext("2d");
     drawGameArea();
-    /*playMusic();*/
     startGameCounthdown();
 }
 
@@ -142,7 +142,10 @@ function imageMovement()
 
     context.clearRect(0, 0, canvas.width, canvas.height)
     context.drawImage(image, image_x_position, 15, image_width, image_height);
-    console.log(image_x_position);
+    //console.log(image_x_position);
+    if(image_x_position >= 1600) {
+        gameOver();
+    }
     incrementVelocityOfImage(totalImagesGuessed);
 }
 
@@ -192,7 +195,6 @@ function incrementVelocityOfImage(imagesGuessed)
 
 function score()
 {
-    let rightSideMax = 1600;
 
     if(image_x_position > 0 && image_x_position <= 400) {
         points = 200;
@@ -209,9 +211,9 @@ function score()
     }else if(image_x_position >= 1550){
         imageSpeed = 1;
         image_x_position = image_x_position + 50;
-        gameOver();
+        
     }
-
+    scoreDisplay.style.animation = "point 700ms";
     return finalScore;
 
 }
@@ -254,9 +256,4 @@ function resultsDisplay()
     resultFinalScore.innerHTML = finalScore + bonus;
 
     resultContainer.style.display = "inline";
-}
-
-function playMusic()
-{
-    audio.play();
 }

@@ -126,3 +126,18 @@
     background-color: #121F3D;
     color: #FFFFFF;
 }
+
+
+@keyframes point{
+    0%{
+        font-size: 16px;
+    }
+
+    50%{
+        font-size: 20px;
+    }
+
+    100%{
+        font-size: 16px;
+    }
+}
