@@ -52,7 +52,7 @@
             </button>
 
             <button class="btn btn-primary">
-                <a style="color: white; text-decoration:none; padding:20px;">Play Again</a>
+                <a style="color: white; text-decoration:none; padding:20px;" onClick="window.location.reload();">Play Again</a>
             </button>
         </div>
 

@@ -23,16 +23,19 @@
             <!--<img src="..." class="card-img-top" alt="...">-->
             <div class="card-body">
                 <h5 class="card-title text-center">Welcome to the <strong>Guess image game</strong>!</h5>
-                <p class="card-text"><strong>Game Description:</strong><br> Different images will appear from the left side of the screen and move to the right side. The images are <strong>“destroyed”</strong> only when the user types the first letter of an image's name. The points scored are a function of the velocity of the moving images, the number of wrong tries and how far the image was to the right position when the users typed the right letter. A fast-moving image destroyed very close to the left edge of the screen with a single key-press gets the User the most points. The more time the User plays the more images on the screen and the faster they will move. The game is over if an image goes all the way through the screen and touches the right side.<br><br><strong>First of all, please enter a name or nickname for save score punctuation record in our database</strong></p>
+                <p class="card-text"><strong>Game Description:</strong><br> Different images will appear from the left side of the screen and move to the right side. The images are <strong>“destroyed”</strong> only when the user types the first letter of an image's name. The points scored are a function of the velocity of the moving images, the number of wrong tries and how far the image was to the right position when the users typed the right letter. A fast-moving image destroyed very close to the left edge of the screen with a single key-press gets the User the most points. The more time the User plays the more images on the screen and the faster they will move. The game is over if an image goes all the way through the screen and touches the right side.<br><br><!--<strong>First of all, please enter a name or nickname for save score punctuation record in our database</strong>--></p>
+                <!--
                 <div class="user">
                     <span id="notification"></span>
                     <label for="name">Name or nickname</label>
                     <input type="text" id="name" name="name" placeholder="Gerald" required>
                 </div>
+            -->
                 <div class="buttons d-flex">
                     <div>
-                        <a id="play-btn"><button type="button" class="btn btn-success">Start</button></a>
+                        <a id="play-btn" href="{{route("play")}}"><button type="button" class="btn btn-success">Start</button></a>
                     </div>
+                    <!--
                     <div>
                         <a href="{{route("score")}}" id="ranking-btn">
                             <button type="button" class="btn btn-primary">
@@ -45,12 +48,14 @@
                             </button>
                         </a>
                     </div>
+                    --->
                 </div>
             </div>
         </div>    
     
     </body>
 
+    <!--
     <script type="text/javascript">
 
         $.ajaxSetup({
@@ -71,7 +76,7 @@
             }else{
                 notify.innerHTML = "";
                 user.style.border = "";
-                var url = "{{route('validate')}}"
+                var url = "{{--route('validate')--}}"
                 var data = user.value;
                 jQuery.ajax({
                     url: url,
@@ -92,4 +97,5 @@
         });
 
     </script>
+    --->
 </html>
