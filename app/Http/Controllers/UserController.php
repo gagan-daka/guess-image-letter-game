@@ -25,7 +25,6 @@ class UserController extends Controller
         
             return response()->json(['status'=> true, 'url'=>url('/play')]);
         }else{
-
             return response()->json(['nameMatch'=> true, 'user' => $name,'url'=>url('/play')]);
         }
 

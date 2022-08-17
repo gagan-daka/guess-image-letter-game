@@ -1,4 +1,4 @@
-var image_x_position = 1;
+var image_x_position = 0;
 var canvas = document.getElementById("game-scenario");
 var context;
 
@@ -49,6 +49,7 @@ if (checkLetterBtn) {
             totalImagesGuessed++;
             score();
             scoreDisplay.innerHTML = finalScore;
+            changeImage();
         }
     });
 }
@@ -58,8 +59,24 @@ function start()
 {
     context = canvas.getContext("2d");
     drawGameArea();
-    insertImageOnCanvas();
-    timer();
+    startGameCounthdown();
+}
+
+
+function startGameCounthdown()
+{
+    var timeleft = 3;
+    var downloadTimer = setInterval(function(){
+    let counthdown = document.getElementById("counthdown");
+    if(timeleft <= 0){
+        clearInterval(downloadTimer);
+        counthdown.remove();
+        timer();
+        insertImageOnCanvas();
+    }
+    counthdown.innerHTML = timeleft;
+    timeleft -= 1;
+    }, 1000);
 }
 
 function timer()
@@ -81,9 +98,6 @@ function timer()
 
 window.addEventListener("load", function(event) {
     start();
-    canvas.style.opacity = "1";
-    canvas.style.transition = "opacity 1s";
-
 });
 
 function drawGameArea()
@@ -94,8 +108,8 @@ function drawGameArea()
 
 function insertImageOnCanvas()
 {
-    image_width = window.innerWidth / 5;
-    image_height = window.innerWidth / 8.5;
+    image_width = 450;
+    image_height = 250;
 
     image = new Image();
     image.src = 'img/'+allImages[Math.floor(Math.random() * allImages.length)];
@@ -113,6 +127,16 @@ function imageMovement()
     incrementVelocityOfImage(totalImagesGuessed);
 }
 
+function changeImage()
+{
+    image_x_position = 0;
+    image = new Image();
+    image.src = 'img/'+allImages[Math.floor(Math.random() * allImages.length)];
+    image.onload = function(){
+        imageMovement();
+    }
+}
+
 var imageInterlval = setInterval(imageMovement, imageSpeed); 
 
 function checkImageFirstLetter()
@@ -124,6 +148,7 @@ function checkImageFirstLetter()
     imgFirstLetter = imgFullName.substring(0,1)
     //alert(imgFirstLetter)
 }
+
 
 function incrementVelocityOfImage(imagesGuessed)
 {
@@ -159,10 +184,12 @@ function score()
     }else if(image_x_position > 0 && image_x_position <= 1200 ) {
         points = 75;
         finalScore += points;
-    }else if(image_x_position > 1200 && image_x_position < 1600){
+    }else if(image_x_position > 1200 && image_x_position < 1550){
         points = 50;
         finalScore += points;
-    }else if(image_x_position >= 1600){
+    }else if(image_x_position >= 1550){
+        imageSpeed = 1;
+        image_x_position = image_x_position + 50;
         gameOver();
     }
 
@@ -172,9 +199,9 @@ function score()
 
 function gameOver()
 {
+    canvas.style.opacity = "0";
+    canvas.style.transition = "opacity 2s";
     clearInterval(imageInterlval);
     clearInterval(timeInterval); 
     gameOverDisplay.innerHTML = "Game Over!"
 }
-
-//setInterval(imageMovement, imageSpeed); 

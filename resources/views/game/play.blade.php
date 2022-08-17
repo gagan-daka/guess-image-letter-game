@@ -15,6 +15,11 @@
     </head>
 
     <body>
+
+        <div class="counthdown-start">
+            <p id="counthdown"></p>
+        </div>
+
         <div class="game-board">
             
             <div class="timer">
@@ -27,7 +32,7 @@
             </div>
         </div>
 
-        <canvas style="opacity: 0;" id="game-scenario"></canvas>
+        <canvas id="game-scenario"></canvas>
 
         <div class="user-input">
             <input type="text" name="letter" id="letter" placeholder="Type first letter only">
