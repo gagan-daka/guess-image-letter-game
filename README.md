@@ -1,7 +1,8 @@
 
 This is a simple game where the user they have to guess the first letter of the image. <br>
 When the user guess the image, this image will change and in the left side appears a new image. The more images the user guesses, the faster the new images will move.<br><br>
-<h4>All game logic is in js</h4>
+<h4>All game logic is in js</h4><br>
+<strong>Click here and <a href="https://gagandeep.alwaysdata.net/" target="_blank">Play!</a></strong>
 
 <h1>GAME SCENARIO</h1>
 <p>The game scenario was drawn with canvas html</p>
@@ -30,7 +31,4 @@ Every area contains breakpoints, this breakpoints they helps for calculate the s
 <h1>GAME OVER</h1>
 <p>Each time the image moved forward its X position was recorded, when the image touched the right side the game was over.All intervals are cleared</p>
 <br>
-<div>
-    <strong>Click here and <a href="https://gagandeep.alwaysdata.net/" target="_blank">Play!</a></strong>
-</div>
 PD: THIS GAME IS DEVELOPED FOR DESKTOP, THE RESPONSIVE ISN'T IMPLEMENTED
