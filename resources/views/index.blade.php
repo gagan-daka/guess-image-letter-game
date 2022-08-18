@@ -23,7 +23,13 @@
             <!--<img src="..." class="card-img-top" alt="...">-->
             <div class="card-body">
                 <h5 class="card-title text-center">Welcome to the <strong>Guess image game</strong>!</h5>
-                <p class="card-text"><strong>Game Description:</strong><br> Different images will appear from the left side of the screen and move to the right side. The images are <strong>“destroyed”</strong> only when the user types the first letter of an image's name. The points scored are a function of the velocity of the moving images, the number of wrong tries and how far the image was to the right position when the users typed the right letter. A fast-moving image destroyed very close to the left edge of the screen with a single key-press gets the User the most points. The more time the User plays the more images on the screen and the faster they will move. The game is over if an image goes all the way through the screen and touches the right side.<br><br><!--<strong>First of all, please enter a name or nickname for save score punctuation record in our database</strong>--></p>
+                <p class="card-text"><strong>Game Description:</strong><br> 
+                Different images will appear from the left side of the screen and move to the right side. 
+                The images are <strong>“destroyed”</strong> only when <strong>you guess the first letter of the image name</strong>. 
+                A fast-moving image destroyed very close to the left edge of the screen with a single key-press gets you most points. 
+                The more time you plays the more images on the screen and the faster they will move. 
+                The game is over if an image goes all the way through the screen and touches the right side.<br><br>
+                <strong>So click on <i>start</i> button and le'ts Play!</strong>
                 <!--
                 <div class="user">
                     <span id="notification"></span>
