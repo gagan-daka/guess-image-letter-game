@@ -5,10 +5,10 @@ When the user guess the image, this image will change and in the left side appea
 
 <h1>GAME SCENARIO</h1>
 <p>The game scenario was drawn with canvas html</p>
-<li>Width : windows width</li>
+<li>Width : windows widthv (canvas.width)</li>
 <li>Height : 200px</li>
-
-The images appears in this canvas and they move from left to right on X position. When more images guess the user, the velocity of the new images increment and they move faster
+<br>
+The images appears in this canvas and they move from left to right on X position(positive). When the user guess an image the <strong>X position return to a 0</strong>.
 
 <br><br>
 <h1>SCORE</h1>
