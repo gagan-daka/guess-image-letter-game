@@ -8,7 +8,7 @@ When the user guess the image, this image will change and in the left side appea
 <li>Width : windows width</li>
 <li>Height : 200px</li>
 
-The images appears in this canvas and they moved from left to right on X position.
+The images appears in this canvas and they move from left to right on X position. When more images guess the user, the velocity of the new images increment and they move faster
 
 <br><br>
 <h1>SCORE</h1>
