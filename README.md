@@ -5,8 +5,10 @@ When the user guess the image, this image will change and in the left side appea
 
 <h1>GAME SCENARIO</h1>
 <p>The game scenario was drawn with canvas html</p>
-<li>Width : canvas current width (windows current width)</li>
+<li>Width : windows width</li>
 <li>Height : 200px</li>
+
+The images appears in this canvas and they moved from left to right on X position.
 
 <br><br>
 <h1>SCORE</h1>
