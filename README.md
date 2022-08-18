@@ -1,8 +1,7 @@
 
 This is a simple game where the user they have to guess the first letter of the image. <br>
-When the user guess the image, this image will change and in the left side appears a new image. The more images the user guesses, the faster the new images will move.<br>
-All game logic is in js
-
+When the user guess the image, this image will change and in the left side appears a new image. The more images the user guesses, the faster the new images will move.<br><br>
+<h4>All game logic is in js</h4>
 
 <h1>GAME SCENARIO</h1>
 <p>The game scenario was drawn with canvas html</p>
