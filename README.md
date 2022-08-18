@@ -31,6 +31,6 @@ Every area contains breakpoints, this breakpoints they helps for calculate the s
 <p>Each time the image moved forward its X position was recorded, when the image touched the right side the game was over.All intervals are cleared</p>
 <br>
 <div>
-    <strong>Click here and <a href="https://gagandeep.alwaysdata.net/" target="_blank">Play</a>!</strong>
+    <strong>Click here and <a href="https://gagandeep.alwaysdata.net/" target="_blank">Play!</a></strong>
 </div>
 PD: THIS GAME IS DEVELOPED FOR DESKTOP, THE RESPONSIVE ISN'T IMPLEMENTED
