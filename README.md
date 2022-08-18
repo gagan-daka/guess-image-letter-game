@@ -25,7 +25,7 @@ Every area contains breakpoints, this breakpoints they helps for calculate the s
 <br>
 
 <h1>IMAGE VELOCITY</h1>
-<p>Every time the user guessed the letter correctly, the number of hits was saved, basically it was done with a conditional (very simple) which, depending on how many images the user had guessed, the speed increased.<strong>Canvas was used to insert the image and apply said speed on X position</strong>.</p>
+<p>Every time the user guessed the letter correctly, the number of hits (totalImages) was saved, basically it was done with a conditional (very simple) which, depending on how many images the user had guessed, the speed increased.<strong>Canvas was used to insert the image and apply said speed on X position</strong>.</p>
 
 <h1>GAME OVER</h1>
-<p>Each time the image moved forward its X position was recorded, when the image touched the right side the game was over. To calculate when it would collide with the right side, it was manually tested at what moment the X position of the image touched the right side.</p>
+<p>Each time the image moved forward its X position was recorded, when the image touched the right side the game was over.All intervals are cleared</p>
