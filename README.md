@@ -29,3 +29,5 @@ Every area contains breakpoints, this breakpoints they helps for calculate the s
 
 <h1>GAME OVER</h1>
 <p>Each time the image moved forward its X position was recorded, when the image touched the right side the game was over.All intervals are cleared</p>
+
+PD: THIS GAME IS DEVELOPED FOR DESKTOP, THE RESPONSIVE ISN'T IMPLEMENTED
