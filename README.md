@@ -13,6 +13,10 @@ The images appears in this canvas and they move from left to right on X position
 <br><br>
 <h1>SCORE</h1>
 <p>For the scoring, the game scenario was divided into 3 areas. Depending on which area the image is in, the score varies.</p>
+<ul>
+    <li>Area 1</li>
+</ul>
+
 <br>
 ![game](https://user-images.githubusercontent.com/66964536/185252558-5dade8be-3320-42d6-b58b-bb6bbab16464.JPG)
 <br>
