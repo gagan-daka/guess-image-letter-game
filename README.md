@@ -15,8 +15,10 @@ The images appears in this canvas and they move from left to right on X position
 <p>For the scoring, the game scenario was divided into 3 areas. Depending on which area the image is in, the score varies.</p>
 <ul>
     <li>Area 1</li>
+    <li>Area 2</li>
+    <li>Area 3</li>
 </ul>
-
+Every area contains breakpoints, this breakpoints they helps for calculate the score of user, when the images is too far of the Area 1 , they indcate us the image is near to the right side and the points that the user gets are few.
 <br>
 ![game](https://user-images.githubusercontent.com/66964536/185252558-5dade8be-3320-42d6-b58b-bb6bbab16464.JPG)
 <br>
