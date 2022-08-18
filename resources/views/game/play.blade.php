@@ -74,11 +74,11 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td id="normal-score-display">1</td>
-                    <td id="total-image-guessed">1</td>
-                    <td id="wrong-tries">1</td>
-                    <td id="bonus">1</td>
-                    <td id="final-score">1</td>
+                    <td id="normal-score-display"></td>
+                    <td id="total-image-guessed"></td>
+                    <td id="wrong-tries"></td>
+                    <td id="bonus"></td>
+                    <td id="final-score"></td>
                   </tr>
                 </tbody>
               </table>
