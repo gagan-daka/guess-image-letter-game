@@ -1,4 +1,5 @@
-All game logic is in js <br>
+
+This is a simple game where the user they have to guess the first letter of the image. All game logic is in js <br>
 
 
 <h1>GAME SCENARIO</h1>
